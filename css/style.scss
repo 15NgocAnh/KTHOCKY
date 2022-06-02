@@ -1,0 +1,137 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+@mixin grid ($val){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 2rem;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+}
+
+.header{
+    height: 30rem;
+    position: relative;
+    background: url(../images/background01.jpg) top center / cover no-repeat;
+    
+    .header-1{
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.7rem;
+        color: #fff;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.622);
+        padding: 1rem 0;
+    }
+    
+    .infor{
+        border-bottom: .5rem solid #fff;
+        color: #fff;
+        text-align: center;
+        font-weight: bolder;
+        padding: 5rem;
+        padding-bottom: 11rem;
+        background-color: rgba(0, 0, 0, 0.489);
+
+        .name{
+            font-size: 4rem;
+            text-transform: uppercase;
+        }
+
+        .class{
+            margin-top: 3rem;
+            font-size: 2rem;
+            text-transform: capitalize;
+        }
+    }
+
+}
+
+.avt{
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    margin-left: 44%;
+    margin-right: 50%;
+    top: 20rem;
+
+    img{
+        width: 100%;
+        height: 100%;
+        border: .5rem solid #fff;
+        border-radius: 50%;
+    }
+}
+
+.form{
+    background-color: #000;
+    padding: 10rem 0;
+
+    .input{
+        border-bottom: .1rem solid #fff;
+        margin: 0 30rem;
+        margin-top: 5rem;
+
+        i{
+            color: #fff;
+            font-size: 1.7rem;
+            margin-right: .5rem;
+        }
+
+        p{
+            background: none;
+            font-size: 2rem;
+            padding: .5rem 0;
+            color: #fff;
+        }
+    }
+}
+
+.login-account {
+    position: relative;
+
+    .login-form, .login-form-1, .login-form-2 {
+        position: absolute;
+        top: 0;
+        left: 40%;
+        background-color: #fff;
+        box-shadow: var(--box-shadow);
+        width: 40rem;
+        padding: 2rem;
+        text-align: center;
+        transform: scaleY(0);
+    }
+
+    .login-form.active, .login-form-1.active, .login-form-2.active {
+        transform: scaleY(1);
+        box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15rem;
+        z-index: 1000;
+      }
+
+      h2{
+          font-size: 2.5rem;
+      }
+
+      p{
+          font-size: 1.7rem;
+          color: #000;
+          margin: 1rem 0;
+      }
+}
+
+
+
