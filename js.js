@@ -40,3 +40,19 @@ window.onscroll = () =>{
     loginForm.classList.remove('active');
     image.classList.remove('active');
 }
+
+document.querySelector('.close').onclick = () =>{
+    loginForm.classList.remove('active');
+}
+
+document.querySelector('.close-1').onclick = () =>{
+  hoctap.classList.remove('active');
+}
+
+document.querySelector('.close-2').onclick = () =>{
+  sp.classList.remove('active');
+}
+
+document.querySelector('.close-3').onclick = () =>{
+  image.classList.remove('active');
+}

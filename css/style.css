@@ -113,6 +113,7 @@ html::-webkit-scrollbar-thumb {
 .form .input:hover {
   background-color: #fff;
   border-radius: 5rem;
+  text-align: center;
 }
 
 .form .input:hover i, .form .input:hover p {
@@ -126,15 +127,16 @@ html::-webkit-scrollbar-thumb {
 .login-account .login-form, .login-account .login-form-1, .login-account .login-form-2, .login-account .login-form-3 {
   position: absolute;
   top: 0;
-  left: 40%;
+  left: 20%;
   background-color: #fff;
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
-  width: 40rem;
+  width: 91rem;
   padding: 2rem;
   text-align: center;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
+  border-radius: 2rem;
 }
 
 .login-account .login-form.active, .login-account .login-form-1.active, .login-account .login-form-2.active, .login-account .login-form-3.active {
@@ -144,14 +146,43 @@ html::-webkit-scrollbar-thumb {
           box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
   margin-left: auto;
   margin-right: auto;
-  margin-top: 15rem;
+  margin-top: 20rem;
   z-index: 1000;
+}
+
+.login-account .close {
+  position: absolute;
+  right: 1rem;
+  top: .7rem;
+  font-size: 3rem;
+  height: 3rem;
+  width: 3rem;
+  color: #000;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.login-account .close:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 .login-account h2 {
   font-size: 2.5rem;
   padding-bottom: 1rem;
   border-bottom: .2rem solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login-account h2 i {
+  font-size: 2.5rem;
+  padding-right: .5rem;
+  color: #000;
 }
 
 .login-account p, .login-account a {
@@ -159,10 +190,39 @@ html::-webkit-scrollbar-thumb {
   font-size: 1.7rem;
   color: #000;
   margin: 1rem 0;
+  cursor: pointer;
 }
 
 .login-account p:hover, .login-account a:hover {
   color: red;
+}
+
+.login-account .login-form-2 .box_profile {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: .5rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.login-account .login-form-2 .box_profile a {
+  font-size: 2rem;
+  padding: 1rem 0;
+  background-color: #778ca3;
+  color: #4b6584;
+  border-radius: 2rem;
+}
+
+.login-account .login-form-2 .box_profile a:hover {
+  background-color: #4b6584;
+  color: #778ca3;
+  letter-spacing: 1rem;
 }
 
 .login-account .login-form-3 {

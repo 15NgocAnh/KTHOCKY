@@ -115,6 +115,7 @@ html{
     .input:hover{
         background-color: #fff;
         border-radius: 5rem;
+        text-align: center;
         
         i, p{
             color: #000;
@@ -128,13 +129,14 @@ html{
     .login-form, .login-form-1, .login-form-2, .login-form-3 {
         position: absolute;
         top: 0;
-        left: 40%;
+        left: 20%;
         background-color: #fff;
         box-shadow: var(--box-shadow);
-        width: 40rem;
+        width: 91rem;
         padding: 2rem;
         text-align: center;
         transform: scaleY(0);
+        border-radius: 2rem;
     }
 
     .login-form.active, .login-form-1.active, .login-form-2.active, .login-form-3.active {
@@ -142,14 +144,38 @@ html{
         box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
         margin-left: auto;
         margin-right: auto;
-        margin-top: 15rem;
+        margin-top: 20rem;
         z-index: 1000;
+    }
+
+    .close{
+        position: absolute;
+        right: 1rem; top: .7rem;
+        font-size: 3rem;
+        height: 3rem;
+        width: 3rem;
+        color: #000;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    .close:hover{
+        background-color: #000;
+        color: #fff;
     }
 
     h2{
         font-size: 2.5rem;
         padding-bottom: 1rem;
         border-bottom: .2rem solid #000;
+        display: flex;
+        justify-content: center;
+
+        i{
+            font-size: 2.5rem;
+            padding-right: .5rem;
+            color: #000;
+        }
     }
 
     p, a{
@@ -157,10 +183,36 @@ html{
         font-size: 1.7rem;
         color: #000;
         margin: 1rem 0;
+        cursor: pointer;
     }
 
     p:hover, a:hover{
         color: red;
+    }
+
+    .login-form-2{
+
+        .box_profile{
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            justify-content: space-around;
+
+            a{
+                font-size: 2rem;
+                padding: 1rem 0;
+                background-color: #778ca3;
+                color: #4b6584;
+                border-radius: 2rem;
+            }
+
+            a:hover{
+                background-color: #4b6584;
+                color: #778ca3;
+                letter-spacing: 1rem;
+            }
+        }
     }
 
     .login-form-3{
